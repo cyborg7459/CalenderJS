@@ -1,0 +1,310 @@
+html {
+    font-size: 10px;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#content {
+    box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.3);
+    width: 95%;
+    max-width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 20px 0px
+}   
+
+#content .row {
+    margin: 0;
+}
+
+#info {
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+#info-subtitle {
+    color: grey;
+    margin: 30px 0px;
+}
+
+#info .lead {
+    font-size: 1.6rem;
+}
+
+#info-content {
+    padding: 40px 10px;
+    padding-bottom: 10px;
+}
+
+.info-input {
+    display: block;
+    margin: 15px 2px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+
+.info-input:focus {
+    outline: none;
+}
+
+#calender-container {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff;
+    padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#date-picker-container {
+    width: 100%;
+    padding: 0;
+    transition: all 0.2s ease-in;
+}
+
+#date-picker {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 0px;
+}
+
+.scroller {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.scroller .lead {
+    font-size: 2rem;
+}
+
+#dates-region {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.scroller .fas:hover {
+    cursor: pointer;
+}
+
+
+#dates-region .row {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    font-size: 1.8rem;
+}
+
+.date-row {
+    padding: 10px 0px;
+}
+
+#days {
+    padding: 20px 0px;
+}
+
+.date {
+    width: 50px!important;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    transition: all 0.2s ease-in;
+}
+
+.old-date {
+    color: rgba(0,0,0,0.1);
+}
+
+.old-date:hover {
+    cursor: not-allowed;
+}
+
+.selectable {
+    background-color: rgba(23, 167, 194,0.1);
+    color: #17a7c2;
+}
+
+.selectable:hover {
+    background-color:  #17a7c2;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.selected {
+    background-color: #17a7c2!important;
+    color : white;
+}
+
+#proceed-btn {
+    width: 80%;
+    background-color: #200336;
+    color: white;
+    font-size: 1.7rem;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.form-control {
+    width: 80%!important;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+#time-picker-container {
+    width: 0px ;
+    transition: all 0.2s ease-in;
+}
+
+#time-picker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    transition: all 0.2s ease-in;
+}
+
+#back {
+    font-size: 16px;
+}
+
+
+#back:hover {
+    cursor: pointer;
+}
+
+#time-picker .selected-dates {
+    background-color: #edffff;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#selected-dates-display.row  {
+    width: 100%;
+}
+
+#selected-dates-display .col-6  {
+    display: flex;
+    justify-content: center;
+    padding: 0px 5px;
+}
+
+#submit-btn {
+    width: 100%!important;
+    padding: 10px 150px;
+    border-radius: 30px;
+    background-color: #200336;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.picker-dialog {
+    position: absolute;
+    top: 32%!important;
+    width: 50%!important;
+    left: 25%!important;
+    height: 36%!important;
+    font-size: 20px!important;
+}
+
+.picker-title {
+    font-size: 24px!important;
+    margin: 15px 0px;
+}
+
+.picker-header {
+    padding: 20px!important;
+}
+
+.picker-cancel, .picker-confirm, .picker-close, .picker-cell__header{
+    font-size: 20px!important;
+}
+
+.picker-cell__header {
+    padding: 15px 0px!important;
+}
+
+@media (max-width : 700px)  {
+    #dates-region .row {
+        width: 100%;
+    }
+
+    .picker-dialog {
+        position: absolute;
+        top: 22%!important;
+        width: 50%!important;
+        left: 25%!important;
+        height: 56%!important;
+        font-size: 20px!important;
+    }
+
+    html {
+        height: auto;
+    }
+
+    #days {
+        font-size: 1.3rem!important;
+    }
+
+    .date {
+        width: 30px!important;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #calender-container {
+        padding: 20px 10px;
+        width: 95%;
+        max-width: 700px;    
+    }
+
+    .picker-dialog {
+        width: 80%!important;
+        left: 10%!important;
+    }
+}
+

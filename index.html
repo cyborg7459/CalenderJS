@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Class Schedule</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.css">
+</head>
+<body>
+    <div id="content" class="row">
+        <div id="info" class="col-md-5">
+            <div id="info-content">
+                <h1 class="title p-0">Schedule your class</h1>
+                <hr>
+                <div id="info-subtitle">
+                    <h2><i class="fas fa-clock mr-3"></i> 30 Minutes Duration</h2>
+                    <h2><i class="fas fa-video mr-3"></i>Video Conferencing</h2>
+                </div>
+                <div id="info-details">
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, dicta. Quo voluptate impedit, accusantium quaerat alias iste, ea, esse reiciendis at saepe veritatis quod. Inventore aliquid vero error natus enim.</p>
+                </div>
+            </div>
+            <div id="info-form">
+                <input required id="availableSeatsInput" type="text" class="info-input" placeholder="Enter number of available slots">
+                <input required id="facultyInput" type="text" class="info-input" placeholder="Enter faculty name">
+            </div>
+        </div>
+        <div id="calender-container" class="col-md-7 d-flex">
+            <div id="date-picker-container" class="d-flex justify-content-center align-items-center">
+                <div id="date-picker">
+                    <h1 class="title p-0">Pick a Date</h1>
+                    <hr>
+                    <div id="month-scroller" class="scroller">
+                        <i class="fas fa-angle-left" id="prev-month"></i>
+                        <div id="month" class="lead"></div>
+                        <i class="fas fa-angle-right" id="next-month"></i>
+                    </div>
+                    <div id="dates-region"></div>
+                    <button id="proceed-btn" class="btn btn-block">Proceed to Choose Time</button>
+                </div>  
+            </div>
+                  
+            <div id="time-picker-container" class="d-flex justify-content-center align-items-center">
+                <div id="time-picker" class="d-none">
+                    <h1 class="title p-0 mb-4">Pick a Time Slot</h1>
+                    <form action="#">
+                        <input type="text" name="seatsavailable" id="avlbl-seats" class="d-none">
+                        <input type="text" name="faculty" id="faculty-name" class="d-none">
+                        <input name="time" required type="text" class="form-control form-control-lg js-time-picker" placeholder="Enter preferred time (HH:MM format)..." >
+                        <input type="text" class="d-none" name="dates" id="form-date">
+                        <button class="submit btn btn-lg btn-round btn-block" type="submit" id="submit-btn">Submit</button>
+                    </form>
+                    <div id="back" class="lead d-block text-info py-3">Go Back to date picker</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.js"></script>
+<script>
+    new Picker(document.querySelector('.js-time-picker'), {
+    format: 'HH:mm',
+    headers: true,
+    text: {
+      title: 'Pick a time',
+    },
+  });
+
+</script>
+</body>
+</html>
